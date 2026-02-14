@@ -5,7 +5,7 @@ Configurações pessoais para Zsh, Bash e WSL.
 ## Instalação
 ```bash
 git clone https://github.com/seu-usuario/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+cd ~/my-dotfiles
 chmod +x install.sh
 ./install.sh
 ```
@@ -14,3 +14,4 @@ chmod +x install.sh
 
 - **zsh/**: Configurações do Zsh
 - **bash/**: Configurações do Bash
+- **git/**: configurações do Git
