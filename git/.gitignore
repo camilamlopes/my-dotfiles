@@ -1,0 +1,5 @@
+# Arquivos que NÃO devem ir pro Git
+.zsh_history
+.bash_history
+*.backup
+.zcompdump*
