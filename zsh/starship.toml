@@ -1,0 +1,85 @@
+format = """
+[┌─](bold green)\
+$time \
+$username$hostname\
+$directory\
+$git_branch$git_state$git_status\
+$docker_context\
+$kubernetes\
+$line_break\
+[│](bold green) \
+$c\
+$golang\
+$python\
+$nodejs\
+$rust\
+$java\
+$cmd_duration\
+$jobs\
+$status\
+$line_break\
+[└─](bold green) $character\
+"""
+
+[username]
+show_always = false  # Mostra apenas em SSH
+format = "[$user](@)"
+
+[hostname]
+ssh_only = true
+format = "[$hostname](bold blue) "
+
+# ====================================================
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+vimcmd_symbol = "[V](bold green)"
+
+# =======================================================================
+
+[c]
+symbol = " "
+format = "[$symbol($version )]($style)"
+style = "bold blue"
+
+[golang]
+symbol = " "
+format = "[$symbol($version )]($style)"
+style = "bold cyan"
+
+[python]
+symbol = " "
+format = "[$symbol($version )]($style)"
+style = "bold yellow"
+
+[nodejs]
+symbol = " "
+format = "[$symbol($version )]($style)"
+style = "bold green"
+
+[kubernetes]
+symbol = "⛵ "
+style = "purple"
+disabled = false
+
+# ====================================================================
+
+[git_branch]
+symbol = "⇵ "
+format = "on [$symbol$branch]($style) "
+style = "bold purple"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "bold red"
+conflicted = "🏳"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕"
+untracked = "?"
+stashed = "📦"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"

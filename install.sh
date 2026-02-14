@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Diretório do repositório
-DOTFILES_DIR="$HOME/dotfiles"
+DOTFILES_DIR="$HOME/my-dotfiles"
 
 # Função para criar symlink
 link_file() {
